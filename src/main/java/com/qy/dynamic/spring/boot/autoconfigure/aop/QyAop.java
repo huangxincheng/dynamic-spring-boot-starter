@@ -61,6 +61,7 @@ public class QyAop {
         Method method = methodSignature.getMethod();
         this.handler(method, point.getTarget().getClass());
         result = point.proceed();
+        logger.info("joinPoint dataSourceKey : " + QyDataSource.getSourceKey());
         //处理ThreadLocal值
         QyDataSource.putSourceKey(null);
         return result;
