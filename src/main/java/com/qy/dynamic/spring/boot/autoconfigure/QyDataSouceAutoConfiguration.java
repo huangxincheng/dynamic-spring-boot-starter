@@ -28,7 +28,7 @@ import java.util.Map;
  **/
 @Configuration
 @ConditionalOnClass(value = {QySource.class})
-@ConditionalOnProperty(name="spring.datasource.type",  havingValue = "com.qy.manydsexample.ds.QyDataSource", matchIfMissing = true)
+@ConditionalOnProperty(name="spring.datasource.type",  havingValue = "com.qy.dynamic.spring.boot.autoconfigure.QyDataSource", matchIfMissing = true)
 @EnableConfigurationProperties(value = {QyDataSourceProperties.class})
 public class QyDataSouceAutoConfiguration {
 
